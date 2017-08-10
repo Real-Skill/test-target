@@ -43,6 +43,7 @@ CREATE TABLE thread (
 
 CREATE TABLE users (
   id          BIGINT                                 DEFAULT nextval('users_id_seq'::regclass) NOT NULL,
+  email       CHARACTER VARYING(256)
 );
 
 
