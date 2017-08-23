@@ -10,7 +10,7 @@ describe('app', function ()
             return getUsers(true).then(function (data)
             {
                 expect(data).to.eql([{id: 1001, name: 'Stefan'}, {id: 1002, name: 'John'}]);
-            })
+            });
         });
     });
     describe('not authorized', function ()
@@ -19,11 +19,11 @@ describe('app', function ()
         {
             return getUsers(false).then(function ()
             {
-                throw Error('Should not pass!')
+                throw Error('Should not pass!');
             }).catch(function (err)
             {
                 expect(err).to.eql('Not permitted!');
-            })
+            });
         });
     });
 });
